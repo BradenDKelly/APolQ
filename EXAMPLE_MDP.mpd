@@ -1,0 +1,116 @@
+;---------------------------------------------------------------------------------
+; MD simulation: NVT
+; Braden Kelly
+; Email: bkelly08@uoguelph.ca
+;---------------------------------------------------------------------------------
+
+; Run Control
+integrator              = sd            ; stochastic leap-frog
+tinit = 0
+init-step = 0
+dt                      = 0.002
+nsteps                  = 1000000          ; number of steps
+
+comm-mode               = Linear
+nstcomm                 = 10
+;===========================================
+; OUTPUT CONTROL
+;===========================================
+nstxout                 = 100              ; [steps] freq to write coordinates to trajectory
+nstvout                 = 100
+nstfout                 = 0              	 ; [steps] freq to write forces to trajectory
+nstlog                  = 0              	 ; [steps] freq to write energies to log file
+nstenergy               = 0              	 ; [steps] freq to write energies to energy file
+nstxout-compressed      = 10000
+; Checkpointing helps you continue after crashes
+nstcheckpoint           = 10000 
+
+;===========================================
+; Neighbor Searching
+;===========================================
+cutoff-scheme            = Verlet
+nstlist                  = 10
+ns-type                  = grid
+pbc                      = xyz
+periodic-molecules       = no
+; nblist cutoff
+rlist                    = 1.5
+
+;===========================================
+; OPTIONS FOR ELECTROSTATICS AND VDW
+; electrostatic type
+;===========================================
+coulombtype              = PME
+; real space cutoff
+;rcoulomb-switch          = 1.18
+rcoulomb                 = 1.2
+; method for vdW (LJ)
+vdwtype                  = switch
+; cut-off lengths
+rvdw-switch              = 1.18
+rvdw                     = 1.2
+; Apply long range dispersion corrections for Energy and Pressure
+DispCorr                 = EnerPres
+; Spacing for the PME/PPPM FFT grid
+fourierspacing           = 0.10
+; EWALD/PME/PPPM parameters
+pme-order                = 6
+ewald-rtol               = 1e-06
+ewald-geometry           = 3d
+epsilon-surface          = 0
+optimize_fft             = yes
+
+;===========================================
+; OPTIONS Thermostat 
+;===========================================
+; temperature coupling
+; temperature is coupled using the sd integrator
+tcoupl                   = no
+; Groups to couple separately
+tc_grps                  = system
+; Time constant (ps) and reference temperature (K)
+tau-t                    = 2.0
+ref-t                    = 298.15
+nsttcouple               = 1
+
+; VELOCITY GENERATION
+gen-vel                  = no            ; using checkpoints to start if this is QMMM
+gen-temp                 = 298.15
+gen-seed                 = 635174012  
+
+; OPTIONS FOR BONDS
+constraints              = all-bonds
+constraint-algorithm     = LINCS
+lincs-order              = 12
+lincs-iter               = 1
+lincs-warnangle          = 45
+morse                    = no
+
+;=======================================================================;
+;=======================================================================;
+; 		      CALCULATES FREE ENERGY
+;=======================================================================;
+;=======================================================================;
+free-energy              = yes
+
+; Standard soft-core potential parameters
+sc-alpha                 = 0.5
+sc-r-power               = 6
+sc-power                 = 1
+
+; The molecule being coupled/decoupled
+couple-moltype           = DUMMY_MOLECULE ; special molecule replace with sed
+
+; Lambda Window
+init_lambda_state        = 0
+couple-lambda0           = vdw-q
+couple-lambda1           = none
+couple-intramol          = no
+;          m =  0   1   2   3   4   5   6   7   8   9   10  11  12   13  14   15  16   17  18   19  20  21  22   23  24   25  26   27  28   29
+vdw-lambdas  = 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.5 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0   
+coul-lambdas = 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.0 1.0 1.0 1.0 1.00 1.0 1.00 1.0 1.0 1.0 1.00 1.0 1.00 1.0 1.00 1.0 1.00 1.0
+
+; Print the differnces in Hamiltonians between all lambda values for MBAR (-1 for MBAR)
+calc-lambda-neighbors = -1
+; Frequency at which difference in the Hamiltonians is calculated
+nstdhdl                  = 100  ; 0.20 ps
