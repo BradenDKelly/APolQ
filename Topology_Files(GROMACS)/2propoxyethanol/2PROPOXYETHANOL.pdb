@@ -1,0 +1,41 @@
+HEADER
+REMARK Spartan '18 exported M0066
+HETATM    1 C1   MOL  0001      -1.062   2.431   0.436
+HETATM    2 H1   MOL  0001      -1.558   3.077   1.160
+HETATM    3 H2   MOL  0001      -0.072   2.851   0.227
+HETATM    4 C2   MOL  0001      -0.899   1.046   1.021
+HETATM    5 H3   MOL  0001      -1.883   0.629   1.268
+HETATM    6 H4   MOL  0001      -0.300   1.091   1.940
+HETATM    7 O1   MOL  0001      -0.263   0.251   0.051
+HETATM    8 C3   MOL  0001      -0.142  -1.104   0.419
+HETATM    9 H5   MOL  0001       0.421  -1.181   1.360
+HETATM   10 H6   MOL  0001      -1.137  -1.532   0.594
+HETATM   11 C4   MOL  0001       0.572  -1.859  -0.681
+HETATM   12 H7   MOL  0001       0.559  -2.919  -0.421
+HETATM   13 H8   MOL  0001       0.000  -1.755  -1.605
+HETATM   14 C5   MOL  0001       2.005  -1.390  -0.894
+HETATM   15 H9   MOL  0001       2.488  -1.962  -1.686
+HETATM   16 H10  MOL  0001       2.033  -0.338  -1.169
+HETATM   17 H11  MOL  0001       2.594  -1.515   0.016
+HETATM   18 O2   MOL  0001      -1.862   2.422  -0.724
+HETATM   19 H12  MOL  0001      -1.496   1.757  -1.312
+CONECT    1    2    3    4   18
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1    5    6    7
+CONECT    5    4
+CONECT    6    4
+CONECT    7    4    8
+CONECT    8    7    9   10   11
+CONECT    9    8
+CONECT   10    8
+CONECT   11    8   12   13   14
+CONECT   12   11
+CONECT   13   11
+CONECT   14   11   15   16   17
+CONECT   15   14
+CONECT   16   14
+CONECT   17   14
+CONECT   18    1   19
+CONECT   19   18
+END
