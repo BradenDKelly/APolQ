@@ -1,0 +1,22 @@
+TITLE     Untitled
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   70.000   70.000   70.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1 C1   MOL     1      -0.845  -1.056  -0.443
+ATOM      2 C2   MOL     1      -0.842   0.321  -1.107
+ATOM      3 N1   MOL     1      -0.451   1.364  -0.158
+ATOM      4 C3   MOL     1       0.846   1.059   0.446
+ATOM      5 C4   MOL     1       0.838  -0.320   1.105
+ATOM      6 N2   MOL     1       0.454  -1.370   0.158
+ATOM      7 H1   MOL     1      -1.085  -1.821  -1.190
+ATOM      8 H2   MOL     1      -1.628  -1.109   0.324
+ATOM      9 H3   MOL     1      -0.164   0.327  -1.970
+ATOM     10 H4   MOL     1      -1.846   0.543  -1.484
+ATOM     11 H5   MOL     1      -0.400   2.261  -0.640
+ATOM     12 H6   MOL     1       1.635   1.114  -0.315
+ATOM     13 H7   MOL     1       1.073   1.820   1.200
+ATOM     14 H8   MOL     1       1.836  -0.543   1.497
+ATOM     15 H9   MOL     1       0.154  -0.330   1.963
+ATOM     16 H10  MOL     1       0.375  -2.252   0.663
+TER
+ENDMDL
