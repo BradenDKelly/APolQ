@@ -1,0 +1,14 @@
+HETATM    1 C1   MOL     1       0.667  -0.020  -0.000
+HETATM    2 H1   MOL     1       1.023  -0.542  -0.889
+HETATM    3 H2   MOL     1       1.023  -0.543   0.889
+HETATM    4 H3   MOL     1       1.079   0.985   0.000
+HETATM    5 O1   MOL     1      -0.749   0.122  -0.000
+HETATM    6 H4   MOL     1      -1.136  -0.758   0.000
+CONECT    1    2    3    4    5                                       
+CONECT    2    1                                                      
+CONECT    3    1                                                      
+CONECT    4    1                                                      
+CONECT    5    1    6                                                 
+CONECT    6    5                                                      
+MASTER        0    0    0    0    0    0    0    0    6    0    6    0
+END
