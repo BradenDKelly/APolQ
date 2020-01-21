@@ -7,7 +7,7 @@ For each molecule there should be, frankly, alot of topology files. For each mol
 
 Due to the vast number of topology files this is the format:
 
-NAME_CM_QM_BASIS_POL_GMX_averaged.top
+NAME_CM_QM_BASIS_PCM_GMX_averaged.top
 
 NAME = name of the solute
 CM = charge method i.e., mbis, resp bcc
