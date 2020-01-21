@@ -9,9 +9,9 @@ Due to the vast number of topology files this is the format:
 
 NAME_CM_QM_BASIS_PCM_GMX_averaged.top
 
-NAME = name of the solute
-CM = charge method i.e., mbis, resp bcc
-QM = QM theory, should only be MP2
-BASIS = basis set used, should be cc-pVTZ or aug-cc-pVTZ
-PCM = continuum or vacuum i.e., True means continuum was used, false mean vacuum calculation was done
-averaged = averaged - it means the MBIS partial charges had their charges averaged out just like RESP and AM!-BCC do
+NAME = name of the solute\\
+CM = charge method i.e., mbis, resp bcc\\
+QM = QM theory, should only be MP2\\
+BASIS = basis set used, should be cc-pVTZ or aug-cc-pVTZ\\
+PCM = continuum or vacuum i.e., True means continuum was used, false mean vacuum calculation was done\\
+averaged = averaged - it means the MBIS partial charges had their charges averaged out just like RESP and AM!-BCC do\\
