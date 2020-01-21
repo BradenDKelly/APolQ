@@ -1,7 +1,7 @@
 # APolQ
-Supporting Information for the publication "A Simple Method for Including Polarization Effects in Solvation Free Energy Calculations When Using  Fixed--Charge Force Fields: Alchemically Polarized Charges." by Braden D. Kelly and William R. Smith, 2020 \
+Supporting Information for the publication "A Simple Method for Including Polarization Effects in Solvation Free Energy Calculations When Using  Fixed--Charge Force Fields: Alchemically Polarized Charges." by Braden D. Kelly and William R. Smith, 2020 
 
-Currently available on chemRxiv https://doi.org/10.26434/chemrxiv.11522133.v1 \
+Currently available on chemRxiv https://doi.org/10.26434/chemrxiv.11522133.v1 
 
 This Repository has the topology files for all partial charge sets on an all 45 molecules studied in the above mentioned manuscript.
 
